@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fictional, family-friendly news story about a Bigfoot sighting in the Pacific Northwest.">
+  <title>The Daily Oddity | Bigfoot Breaks His Silence</title>
+  <style>
+    :root {
+      --ink: #17231d;
+      --muted: #657168;
+      --paper: #fbfaf5;
+      --green: #244b3b;
+      --lime: #d8ef9b;
+      --line: #dcded5;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+    .notice {
+      padding: 8px 16px;
+      text-align: center;
+      background: var(--lime);
+      color: #263426;
+      font: 700 12px/1.4 Arial, sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    header, main, footer { width: min(1120px, calc(100% - 36px)); margin: auto; }
+    .masthead { padding: 26px 0 18px; text-align: center; border-bottom: 3px solid var(--ink); }
+    .eyebrow { color: var(--muted); font: 700 11px Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    h1.logo { margin: 3px 0 0; font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: .98; letter-spacing: -.06em; }
+    .tagline { margin: 10px 0 0; color: var(--muted); font: 13px Arial, sans-serif; }
+    nav { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 13px 0; border-bottom: 1px solid var(--line); }
+    nav a {
+      display: inline-block; padding: 8px 13px; border: 1px solid transparent; border-radius: 3px;
+      color: var(--ink); text-decoration: none; font: 700 12px Arial, sans-serif; text-transform: uppercase;
+    }
+    nav a:hover, nav a:focus { background: var(--green); color: white; }
+    .section-label { margin: 28px 0 14px; font: 700 11px Arial, sans-serif; letter-spacing: .15em; text-transform: uppercase; color: var(--green); }
+    .hero { display: grid; grid-template-columns: 1.08fr .92fr; gap: 30px; align-items: center; padding: 12px 0 32px; }
+    .pill { display: inline-block; background: var(--lime); padding: 5px 9px; border-radius: 2px; font: 700 10px Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    h2 { margin: 14px 0; font-size: clamp(2.3rem, 4.7vw, 4.5rem); line-height: .99; letter-spacing: -.045em; }
+    .dek { color: #465249; font-size: 1.16rem; }
+    .byline { margin-top: 22px; color: var(--muted); font: 12px/1.7 Arial, sans-serif; }
+    .hero-image { margin: 0; position: relative; }
+    .hero-image img { display: block; width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; border-radius: 4px; }
+    figcaption { margin-top: 8px; color: var(--muted); font: 11px/1.5 Arial, sans-serif; }
+    .image-credit { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; border-top: 1px solid var(--line); padding-top: 26px; padding-bottom: 40px; }
+    .story { display: grid; grid-template-columns: 130px 1fr; gap: 17px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .story img { width: 130px; height: 112px; object-fit: cover; border-radius: 3px; }
+    .story h3 { margin: 0 0 5px; font-size: 1.35rem; line-height: 1.15; }
+    .story p { margin: 0; color: #586259; font-size: .95rem; }
+    .sidebar { padding: 20px; background: #eef1e7; border-radius: 4px; align-self: start; }
+    .sidebar h3 { margin: 0 0 10px; font-size: 1.6rem; }
+    .sidebar p { margin: 0 0 12px; font-size: .98rem; }
+    .fact { padding: 13px 0; border-top: 1px solid #d3d9cb; }
+    .fact strong { display: block; font: 700 10px Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--green); }
+    .quote { margin: 25px 0; padding: 22px; border-left: 4px solid var(--green); background: white; font-size: 1.35rem; font-style: italic; }
+    footer { border-top: 3px solid var(--ink); padding: 23px 0 30px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-name { font-size: 1.5rem; font-weight: bold; }
+    .footer-copy, .footer-links { color: var(--muted); font: 12px/1.9 Arial, sans-serif; }
+    .footer-links a { color: var(--muted); margin-right: 12px; text-decoration: none; }
+    .disclaimer { margin-top: 17px; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font: 11px/1.6 Arial, sans-serif; }
+    @media (max-width: 760px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      .hero-image { grid-row: 1; }
+      .hero-image img { aspect-ratio: 16 / 10; }
+      h2 { font-size: clamp(2.5rem, 12vw, 4rem); }
+    }
+    @media (max-width: 420px) {
+      .story { grid-template-columns: 96px 1fr; gap: 12px; }
+      .story img { width: 96px; height: 100px; }
+      nav { gap: 2px; }
+      nav a { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice">Fictional satire — this is not a real news report</div>
+
+  <header>
+    <div class="masthead">
+      <div class="eyebrow">Curious stories from a questionable world</div>
+      <h1 class="logo">The Daily Oddity</h1>
+      <p class="tagline">Strange headlines. Serious-looking journalism. Absolutely silly news.</p>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#">Science</a>
+      <a href="#">History</a>
+      <a href="#">Mysteries</a>
+      <a href="#">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="section-label">Top story / Mystery desk</p>
+    <article class="hero">
+      <div>
+        <span class="pill">Exclusive • Totally fictional</span>
+        <h2>Bigfoot Breaks His Silence: “I’m Just Trying to Get Some Sleep”</h2>
+        <p class="dek">After decades of blurry photos and wild rumors, the legendary forest giant has supposedly asked hikers to stop shouting his name and leaving granola wrappers near his cave.</p>
+        <p class="byline">By Casey Timberline · Odd News Correspondent<br>October 21, 2026 · 4 minute read</p>
+      </div>
+      <figure class="hero-image">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1100&q=85" alt="Tall evergreen trees in a misty forest">
+        <figcaption>A misty forest similar to the sort of place Bigfoot is rumored to call home. <span class="image-credit">Photo: Unsplash</span></figcaption>
+      </figure>
+    </article>
+
+    <section class="grid">
+      <div>
+        <p class="section-label">The latest unbelievable developments</p>
+        <article class="story">
+          <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=500&q=80" alt="Sunlight shining through a green forest">
+          <div>
+            <h3>Forest Residents Demand a “Quiet Hours” Rule</h3>
+            <p>Local woodland creatures have allegedly proposed a 9 p.m. noise limit after one too many midnight Bigfoot-hunting expeditions.</p>
+          </div>
+        </article>
+        <article class="story">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=500&q=80" alt="A peaceful trail winding through trees">
+          <div>
+            <h3>Mysterious Footprints Lead Directly to a Snack Stand</h3>
+            <p>Investigators were reportedly stunned when enormous tracks ended beside an empty box of blueberry muffins. The muffins remain missing.</p>
+          </div>
+        </article>
+        <article class="story">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80" alt="Mountain landscape beneath a cloudy sky">
+          <div>
+            <h3>Bigfoot Allegedly Requests His Own National Park Bench</h3>
+            <p>A made-up petition claims the forest celebrity wants somewhere to sit while watching tourists search for him.</p>
+          </div>
+        </article>
+
+        <blockquote class="quote">“I never asked to be famous. I just have very large feet and a terrible sense of direction.” <br><span style="font: 11px Arial, sans-serif; color: #657168;">— A completely fictional quote attributed to Bigfoot</span></blockquote>
+
+        <h3>So, what happens next?</h3>
+        <p>In this entirely imaginary report, Bigfoot plans to take a short vacation somewhere with no hiking trails, no camera flashes, and—most importantly—no one asking him to pose beside a ruler. Experts in this fictional story say the best way to respect the forest is to keep it clean and give wildlife plenty of space.</p>
+      </div>
+
+      <aside class="sidebar">
+        <span class="pill">Official-ish update</span>
+        <h3>Bigfoot by the Numbers</h3>
+        <p>Our newsroom's completely invented research team has assembled these highly questionable statistics.</p>
+        <div class="fact"><strong>Reported shoe size</strong> Somewhere between “huge” and “please don't ask.”</div>
+        <div class="fact"><strong>Favorite snack</strong> Blueberry muffins, allegedly.</div>
+        <div class="fact"><strong>Most avoided activity</strong> Being photographed by someone with a 2009 flip phone.</div>
+        <div class="fact"><strong>Current status</strong> Probably enjoying a nap. (Made up.)</div>
+        <p style="font-size: .8rem; color: #657168; margin-top: 16px;">Reminder: these details are jokes written for a school project, not facts.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">The Daily Oddity</div>
+        <div class="footer-copy">Delivering strange stories from an imaginary newsroom.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Editorial Policy</a>
+        <a href="#">Send a Tip</a>
+      </div>
+    </div>
+    <div class="disclaimer">© 2026 The Daily Oddity · This website is fictional and intended for entertainment. The story, quotes, statistics, and events on this page are made up. Forest photos are from Unsplash.</div>
+  </footer>
+</body>
+</html>
